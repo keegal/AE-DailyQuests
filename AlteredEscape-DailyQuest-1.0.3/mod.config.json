@@ -8,7 +8,7 @@
     "src/cache.js": "CacheModLoad"
   },
   "settings": {
-    "debug":true,
+    "debug":false,
     "elimination": {
       "enabled": true,
       "min": 4,
