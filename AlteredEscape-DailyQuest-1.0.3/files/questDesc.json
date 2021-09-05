@@ -1,0 +1,12 @@
+{
+  "name": "Daily Quest",
+  "description": "DailyDesc",
+  "note": "",
+  "failMessageText": "DailyFail",
+  "startedMessageText": "DailyStarted",
+  "successMessageText": "DailyDone",
+  "conditions": {
+  },
+  "location": "any"
+
+}

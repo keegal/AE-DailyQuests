@@ -1,0 +1,173 @@
+{
+	"_id": "DailyI-9fa70665-dd15-4f01-8e96-4c06501f8c73",
+	"traderId": "579dc571d53a0658a154fbec",
+	"image": "/files/quest/icon/5ae3274386f7745b4246b387.jpg",
+	"location": "any",
+	"type": "Elimination",
+	"isKey": false,
+	"restartable": false,
+	"instantComplete": false,
+	"secretQuest": false,
+	"min_level": 1,
+	"canShowNotificationsInGame": true,
+	"rewards": {
+		"Started": [],
+		"Success": [
+			{
+				"target": "reward0I-9fa70665-dd15-4f01-8e96-4c06501f8c73",
+				"value": 80000,
+				"type": "Item",
+				"index": 0,
+				"id": "I-77ef204c-8ccc-489c-915a-5d12f4582dd8",
+				"unknown": false,
+				"items": [
+					{
+						"_id": "reward0I-9fa70665-dd15-4f01-8e96-4c06501f8c73",
+						"_tpl": "5449016a4bdc2d6f028b456f",
+						"upd": {
+							"StackObjectsCount": 80000
+						}
+					}
+				]
+			},
+			{
+				"target": "reward1I-9fa70665-dd15-4f01-8e96-4c06501f8c73",
+				"value": 1,
+				"type": "Item",
+				"index": 1,
+				"id": "I-edff8bbe-42b8-4a21-b406-099e3df71398",
+				"unknown": true,
+				"items": [
+					{
+						"_id": "reward1I-9fa70665-dd15-4f01-8e96-4c06501f8c73",
+						"_tpl": "5e54f62086f774219b0f1937",
+						"upd": {
+							"StackObjectsCount": 1
+						}
+					}
+				]
+			},
+			{
+				"target": "reward2I-9fa70665-dd15-4f01-8e96-4c06501f8c73",
+				"value": 1,
+				"type": "Item",
+				"index": 2,
+				"id": "I-dee7c294-a822-405b-b6e0-5cebfd754cb4",
+				"unknown": false,
+				"items": [
+					{
+						"_id": "reward2I-9fa70665-dd15-4f01-8e96-4c06501f8c73",
+						"_tpl": "fleakey",
+						"upd": {
+							"StackObjectsCount": 1
+						}
+					}
+				]
+			}
+		],
+		"Fail": []
+	},
+	"conditions": {
+		"AvailableForStart": [],
+		"AvailableForFinish": [
+			{
+				"_parent": "CounterCreator",
+				"_props": {
+					"value": 4,
+					"type": "Elimination",
+					"doNotResetIfCounterCompleted": false,
+					"oneSessionOnly": false,
+					"counter": {
+						"id": "I-b9257542-b84c-4fcb-8107-01015e5dd216",
+						"conditions": [
+							{
+								"_parent": "Kills",
+								"_props": {
+									"target": "Savage",
+									"compareMethod": ">=",
+									"value": "1",
+									"id": "I-2d03cb0c-56a7-4200-8d31-1aae0e88d6b4",
+									"weapon": [
+										"5aafa857e5b5b00018480968",
+										"5fc22d7c187fea44d52eda44",
+										"5a367e5dc4a282000e49738f",
+										"5df8ce05b11454561e39243b",
+										"5c46fbd72e2216398b5a8c9c",
+										"57838ad32459774a17445cd2",
+										"588892092459774ac91d4b11",
+										"5bfea6e90db834001b7347f3",
+										"5ae08f0a5acfc408fb1398a1",
+										"5bfd297f0db834001a669119",
+										"55801eed4bdc2d89578b4588",
+										"5df24cf80dee1b22f862e9bc",
+										"5de652c31b7e3716273428be"
+									],
+									"daytime": {
+										"from": 20,
+										"to": 5
+									},
+									"distance": {
+										"compareMethod": "=>",
+										"value": 78
+									},
+									"bodyPart": [
+										"Head"
+									],
+									"savageRole": [
+										"Usec"
+									]
+								}
+							}
+						]
+					},
+					"index": 0,
+					"parentId": "",
+					"id": "conditionI-9fa70665-dd15-4f01-8e96-4c06501f8c73"
+				}
+			}
+		],
+		"Fail": [
+			{
+				"_parent": "CounterCreator",
+				"_props": {
+					"value": "1",
+					"type": "Elimination",
+					"counter": {
+						"id": "DailyI-5c0d4f46d09282029f539215",
+						"conditions": [
+							{
+								"_parent": "ExitStatus",
+								"_props": {
+									"status": [
+										"Killed",
+										"MissingInAction"
+									],
+									"id": "DailyI-5c13990686f7743b056e2aab"
+								}
+							},
+							{
+								"_parent": "Location",
+								"_props": {
+									"target": [
+										"Shoreline",
+										"Woods",
+										"bigmap",
+										"factory4_day",
+										"factory4_night",
+										"laboratory",
+										"Interchange",
+										"RezervBase"
+									],
+									"id": "DailyI-5c13992486f774365a69cc4e"
+								}
+							}
+						]
+					},
+					"index": 0,
+					"parentId": "",
+					"id": "failConI-9fa70665-dd15-4f01-8e96-4c06501f8c73"
+				}
+			}
+		]
+	}
+}

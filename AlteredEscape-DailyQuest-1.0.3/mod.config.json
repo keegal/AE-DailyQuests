@@ -1,0 +1,50 @@
+{
+  "name": "DailyQuest",
+  "author": "AlteredEscape",
+  "description": "Adds a random quest to fence every 24 hours",
+  "license": "MIT",
+  "version": "1.0.3",
+  "src": {
+    "src/cache.js": "CacheModLoad"
+  },
+  "settings": {
+    "debug":true,
+    "elimination": {
+      "enabled": true,
+      "min": 4,
+      "max": 25,
+      "bossMin": 1,
+      "bossMax": 5,
+      "chances": {
+        "pmc": 45
+      }
+    },
+    "fetch": {
+      "enabled": true,
+      "findFirst": true,
+      "randomItems": false,
+      "min": 1,
+      "max": 5,
+      "perItem": {
+        "max": 2
+      }
+    },
+    "contract": {
+      "enabled": true,
+      "onlyBosses": false,
+      "anyTime": false,
+      "anyDistance": false,
+      "maxDistance": 110,
+      "anyWeapon": false,
+      "onlyHead": true,
+      "min": 1,
+      "max": 5,
+      "chances":{
+        "boss": 33
+      }
+    },
+    "folders": [],
+    "filenames": [],
+    "Agree": false
+  }
+}

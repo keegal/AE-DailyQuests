@@ -1,0 +1,23 @@
+{
+  "_id": "",
+  "traderId": "579dc571d53a0658a154fbec",
+  "image": "",
+  "location": "any",
+  "type": "Elimination",
+  "isKey": false,
+  "restartable": false,
+  "instantComplete": false,
+  "secretQuest": false,
+  "min_level": 1,
+  "canShowNotificationsInGame": true,
+  "rewards": {
+      "Started": [],
+      "Success": [],
+      "Fail": []
+  },
+  "conditions": {
+      "AvailableForStart": [],
+      "AvailableForFinish": [],
+      "Fail": []
+  }
+}

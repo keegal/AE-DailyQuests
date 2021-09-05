@@ -1,0 +1,106 @@
+{
+  "kill": [
+    {
+      "_parent": "CounterCreator",
+      "_props": {
+        "value": "",
+        "type": "Elimination",
+        "doNotResetIfCounterCompleted": false,
+        "oneSessionOnly": false,
+        "counter": {
+          "id": "",
+          "conditions": [
+            {
+              "_parent": "Kills",
+              "_props": {
+                "target": "",
+                "compareMethod": ">=",
+                "value": "1",
+                "id": ""
+              }
+            }
+          ]
+        },
+        "index": 0,
+        "parentId": "",
+        "id": ""
+      }
+    }
+  ],
+  "find": [
+    {
+      "_parent": "FindItem",
+      "_props": {
+        "target": [],
+        "value": "1",
+        "index": 0,
+        "parentId": "",
+        "id": "findDesc",
+        "minDurability": 0,
+        "maxDurability": 0,
+        "dogtagLevel": 0,
+        "onlyFoundInRaid": false,
+        "resetOnSessionEnd": false
+      }
+    }
+  ],
+  "hand": [
+    {
+      "_parent": "HandoverItem",
+      "_props": {
+        "target": [],
+        "value": "1",
+        "index": 1,
+        "parentId": "",
+        "id": "handDesc",
+        "visibilityConditions": [],
+        "minDurability": 0,
+        "maxDurability": 0,
+        "dogtagLevel": 0
+      }
+    }
+  ],
+  "fail":[
+    {
+      "_parent": "CounterCreator",
+      "_props": {
+        "value": "1",
+        "type": "Elimination",
+        "counter": {
+          "id": "DailyI-5c0d4f46d09282029f539215",
+          "conditions": [
+            {
+              "_parent": "ExitStatus",
+              "_props": {
+                "status": [
+                  "Killed",
+                  "MissingInAction"
+                ],
+                "id": "DailyI-5c13990686f7743b056e2aab"
+              }
+            },
+            {
+              "_parent": "Location",
+              "_props": {
+                "target": [
+                  "Shoreline",
+                  "Woods",
+                  "bigmap",
+                  "factory4_day",
+                  "factory4_night",
+                  "laboratory",
+                  "Interchange",
+                  "RezervBase"
+                ],
+                "id": "DailyI-5c13992486f774365a69cc4e"
+              }
+            }
+          ]
+        },
+        "index": 0,
+        "parentId": "",
+        "id": "DailyFaily"
+      }
+    }
+  ]
+}
