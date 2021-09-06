@@ -57,6 +57,7 @@ exports.mod = (mod_data) => {
         return logger.logSuccess(`New Daily Quest Added`)
     }else{ 
         quests.data.push(lastquest)
+        fileIO.write(PathResolver('user/cache/quests.json'), quests, true)
         fileIO.write(PathResolver('user/cache/locale_en.json'), lastquesten, true)
         fileIO.write(PathResolver(db.locales["en"].quest), lastquesten.quest, true)
         return logger.logSuccess(`Daily Quest Applied`)
