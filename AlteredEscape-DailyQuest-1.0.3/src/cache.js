@@ -107,28 +107,28 @@ exports.mod = (mod_data) => {
         newQuest._id = DailyQID
         if (type === "Hit"){
             settings = settings.contract
-            let target, res, side, mTime, targetValue
+            let target, dqRes, side, mTime, targetValue
             let killNumber = utility.getRandomInt(settings.min, settings.max)
             let condition = condList.kill[0]
             let message = {"bonus": false, "silenced": false}
             let randSelect = utility.getRandomInt(0, 100)
             if (randSelect <= settings.chances.boss || settings.onlyBosses){
-                    res = getTarget("Boss")
+                    dqRes = getTarget("Boss")
                     targetValue = 35000
             }else{
                 if (utility.getRandomInt(1,2) === 1){
-                    res = getTarget("Pmc")
+                    dqRes = getTarget("Pmc")
                     targetValue = 20000
                 }else{
-                    res = getTarget("Scav")
+                    dqRes = getTarget("Scav")
                     targetValue = 10000
                 }
             }
-            side = res.side
+            side = dqRes.side
             let rubles = killNumber * targetValue
-            dbugmessage(`****Contract Kill /-${killNumber}-/ ${res.target} --`)
+            dbugmessage(`****Contract Kill /-${killNumber}-/ ${dqRes.target} --`)
             message.kill = killNumber
-            message.target = res.target
+            message.target = dqRes.target
             newQuest.rewards.Success.push(addReward(0, nQID, rubles, "5449016a4bdc2d6f028b456f", false))
             if (utility.getRandomInt(0,4) === 2){
                 if (utility.getRandomInt(1,2) === 2){
@@ -303,9 +303,9 @@ exports.mod = (mod_data) => {
             let sel = utility.getRandomInt(0, 100)
             let side
             if (sel <= settings.chances.pmc){
-                res = getTarget("Pmc")
-                side = res.side
-                target = res.target
+                dqRes = getTarget("Pmc")
+                side = dqRes.side
+                target = dqRes.target
             }else if (sel >= 90){
                 target = "Boss"
             }else{
@@ -326,9 +326,9 @@ exports.mod = (mod_data) => {
                     newQuest.image = "/files/quest/icon/5979ef2a86f77431185415c3.jpg"
                 }
             }else{
-                res = getTarget("Boss")
-                side = res.side
-                target = res.target
+                dqRes = getTarget("Boss")
+                side = dqRes.side
+                target = dqRes.target
                 killNumber = utility.getRandomInt(settings.bossMin, settings.bossMax)
                 let rubles = killNumber * 20000
                 dbugmessage(`****Boss Kill /-${killNumber}-/ ${target} --`)
