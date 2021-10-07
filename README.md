@@ -1,6 +1,6 @@
 # DailyQuests For Kovacs Altered Escape v2.0.7.1
 ------------------
-Mod Version 1.0.3
+Mod Version 1.0.4
 
 ## Installation
 1. Extract archive to [ServerFolder] - `User/Mods/` 
